@@ -1,50 +1,40 @@
-var pagination = document.getElementsByClassName(`pagination`);
-var btnAgregar = document.getElementsByClassName(`waveseffect`);
-
-async function getEpisodeData() {
-  const response = await fetch(`https://rickandmortyapi.com/api/episode`);
-  const data = response.json();
-  return data;
-}
-getEpisodeData();
-
-pagination.addEventListener(`click`, (e) => {
-  console.log(e.target.tagName);
-  if (e.target && e.target.tagName === "A") {
-    e.target.classlist.toggle(`activo`);
-  }
-});
-
-function createCard(episode, air_date, name) {
+function displayEpisode() {
   return `
-  <div class="subcards">
-            <div class="backgroundImg">
-              <h2>${name}</h2>
-            <p>${air_date}</p>
-            <h1>${episode}</h1>
-            </div>
-            <div class="divbutton">
-              <a href="./info.html"><button>+info</button></a>
-            </div>
+
+    <section class="cards_main">
+          
+          </section>
+      `
+}
+
+async function getAllEpisodeData() {
+  fetch("https:rickandmortyapi.com/api/episode").then(response => response.json())
+    .then(json => displayAllEpisodes(json.results));
+}
+
+async function displayAllEpisodes(episodesData) {
+  let page = document.getElementById("root");
+  page.innerHTML = displayEpisode();
+
+  const cardContainer = document.querySelector('.cards_main');
+  cardContainer.innerHTML = "";
+
+  episodesData.forEach(episode => {
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('subcards');
+
+    cardElement.innerHTML = `
+        <div class="backgroundImg">
+          <h2>${episode.name}</h2>
+          <p>${episode.air_date}</p>
+          <h1>${episode.episode}</h1>
+        </div>
+        <div class="divbutton">
+          <a href="./info.html"><button>+info</button></a>
           </div>
-  `;
+        </div>
+    `;
+
+    cardContainer.appendChild(cardElement);
+  });
 }
-
-async function displayEpisodes() {
-  const data = await getEpisodeData();
-
-  let result = "";
-  for await (element of data.results) {
-    result += createCard(element.episode, element.air_date, element.name);
-  }
-  return result;
-}
-
-addEventListener
-// waveseffect.addEventListener(`click`, () => {
-//   const elemento = `
-//   <li class="waveseffect"><a href="#!">1</a></li>
-//             <li class="waveseffect"><a href="#!">2</a></li>
-//             <li class="waveseffect"><a href="#!">3</a></li>
-//   `;
-// });

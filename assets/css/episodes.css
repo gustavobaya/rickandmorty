@@ -1,4 +1,4 @@
-#cards_main {
+.cards_main {
   background-color: #c69eeb!important;
   
   width: 100%!important;
@@ -17,6 +17,7 @@
   height: 350px !important;
   flex-direction: column!important;
   align-items: center!important;
+  justify-content: center !important;
   margin: 1rem 1rem!important;
   box-shadow: 13px 10px 29px -7px rgba(0, 0, 0, 0.71)!important;
   -webkit-box-shadow: 13px 10px 29px -7px rgba(0, 0, 0, 0.71)!important;

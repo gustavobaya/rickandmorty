@@ -25,24 +25,26 @@
 }
 
 
-.card .card-img-top{
-    background-repeat: no-repeat;
+.card {
+    width: 260px;
+    max-width: 330px;
+    max-height:560px;
+    margin: 12px !important;
 }
 .card-img-top {
-    background-size: contain;
-    height: 430px;
-    width: 460px !important;
+    background-repeat: no-repeat;
     background-size: auto;
     opacity: 50%;
     padding: 0px;
-    margin: 20px !important;
+    width: auto !important;
+    margin: 0;
 }
 
 .card-body p {
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 30px;
+    font-size: 20px;
 }
 .card-body h4 {
     justify-content: center;
@@ -50,7 +52,6 @@
     display: flex;
     font-size: 20px;
     color: red;
-    margin-top: 10px
 }
 .card-body h5 {
     justify-content: center;
@@ -58,12 +59,4 @@
     display: flex;
     font-size: 20px;
     color: purple;
-    margin-top: 10px
-
-}
-
-
-.card {
-    margin: 12px !important;
-
 }
