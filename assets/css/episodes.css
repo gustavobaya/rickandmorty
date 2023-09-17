@@ -1,0 +1,67 @@
+#cards_main {
+  background-color: #c69eeb!important;
+  
+  width: 100%!important;
+  display: grid!important;
+  padding-bottom: 4rem!important;
+  grid-auto-flow: dense!important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr))!important;
+}
+
+.subcards {
+  text-align: center!important;
+  border: 1px solid whitesmoke!important;
+  border-radius: 10px!important;
+  display: flex!important;
+  overflow: hidden!important;
+  height: 350px !important;
+  flex-direction: column!important;
+  align-items: center!important;
+  margin: 1rem 1rem!important;
+  box-shadow: 13px 10px 29px -7px rgba(0, 0, 0, 0.71)!important;
+  -webkit-box-shadow: 13px 10px 29px -7px rgba(0, 0, 0, 0.71)!important;
+  -moz-box-shadow: 13px 10px 29px -7px rgba(0, 0, 0, 0.71)!important;
+}
+
+.backgroundImg {
+  background-image: linear-gradient(
+      rgba(237, 227, 227, 0.401),
+      rgba(237, 227, 227, 0.401)
+    ),
+    url(../img/rick-morty-.webp);
+    background-position: center center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    height: 100%!important;
+    font-size: 1.5rem !important;
+    width: 100%!important;
+}
+
+.backgroundImg > h2 {
+  margin: 50px;
+}
+
+
+.divbutton a > button {
+  background-color: rgb(236, 29, 163)!important;
+  color: white!important;
+  width: 100%!important;
+  padding: 1rem!important;
+  display: flex!important;
+  justify-content: center!important;
+  align-items: flex-end!important;
+  text-decoration: none!important;
+  border-width: 0px!important;
+}
+
+.divbutton {
+  text-decoration: none!important;
+  width: 100%!important;
+}
+
+.divbutton a > button:hover {
+  cursor: pointer!important;
+  background-color: rgb(122, 157, 239)!important;
+  color: black!important;
+}
+

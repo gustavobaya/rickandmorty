@@ -3,27 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/episodes.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="../assets/css/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/css/locations.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <title>Rick and Morty</title>
   </head>
-
   <body>
-    <header id="header">
+    <header id="headerNavBar">
       <nav class="nav-extended deep-purple lighten-1">
         <div class="nav-wrapper">
           <a
@@ -48,15 +40,15 @@
           >
             <ul id="nav-mobile" style="list-style: none">
               <li>
-                <a class="waves-effect waves-light btn" href="#">CHARACTER</a>
+                <a class="waveseffect waves-light btn" href="#">CHARACTER</a>
               </li>
               <li>
-                <a class="waves-effect waves-light btn" href="locations.html"
+                <a class="waveseffect waves-light btn" href="locations.html"
                   >LOCATION</a
                 >
               </li>
               <li>
-                <a class="waves-effect waves-light btn" href="episodes.html"
+                <a class="waveseffect waves-light btn" href="episodes.html"
                   >EPISODE</a
                 >
               </li>
@@ -97,12 +89,12 @@
             <li class="disabled">
               <a href="#!"><i class="material-icons">chevron_left</i></a>
             </li>
-            <li class="active deep-purple lighten-1"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect">
+            <li class="waveseffect"><a href="#!">1</a></li>
+            <li class="waveseffect"><a href="#!">2</a></li>
+            <li class="waveseffect"><a href="#!">3</a></li>
+            <li class="waveseffect"><a href="#!">4</a></li>
+            <li class="waveseffect"><a href="#!">5</a></li>
+            <li class="waveseffect">
               <a href="#!"><i class="material-icons">chevron_right</i></a>
             </li>
           </ul>
@@ -116,11 +108,9 @@
         <li><a href="episode.html">EPISODES</a></li>
       </ul>
     </header>
-
-    <main id="root">
-      <section id="location_cars"></section>
+    <main>
+      <section id="cards_main"></section>
+      <script src="assets/js/episode.js"></script>
     </main>
-    <script src="../assets/js/location.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
