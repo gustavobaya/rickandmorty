@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/episodes.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <header id="headerNavBar">
+      <nav class="nav-extended deep-purple lighten-1">
+        <div class="nav-wrapper">
+          <a
+            href="../index.html"
+            style="cursor: pointer"
+            class="brand-logo left hide-on-med-and-down"
+          >
+            <img
+              style="height: 135px; width: 135"
+              src="../assets/img/logoNav.png"
+              alt="logonNav"
+            />
+          </a>
+
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+
+          <div
+            class="container hide-on-med-and-down"
+            style="display: flex; justify-content: center"
+          >
+            <ul id="nav-mobile" style="list-style: none">
+              <li>
+                <a class="waveseffect waves-light btn" href="#">CHARACTER</a>
+              </li>
+              <li>
+                <a class="waveseffect waves-light btn" href="locations.html"
+                  >LOCATION</a
+                >
+              </li>
+              <li>
+                <a class="waveseffect waves-light btn" href="episodes.html"
+                  >EPISODE</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="container">
+            <form
+              style="
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+              "
+            >
+              <div class="input-field right">
+                <input
+                  id="search"
+                  type="search"
+                  placeholder="Buscar..."
+                  required
+                />
+                <label class="label-icon" for="search"
+                  ><i class="material-icons">search</i></label
+                >
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div
+          id="pagination"
+          style="display: flex; justify-content: center"
+          class="nav-content"
+        ></div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="character.html">CHARACTERS</a></li>
+        <li><a href="location.html">LOCATIONS</a></li>
+        <li><a href="episode.html">EPISODES</a></li>
+      </ul>
+    </header>
+    <main>
+      <section id="cards_main"></section>
+      <script src="../assets/js/episode.js"></script>
+    </main>
+  </body>
+</html>

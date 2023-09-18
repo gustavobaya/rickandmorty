@@ -1,0 +1,104 @@
+
+
+.index {
+    background-color: rgb(15, 15, 15)!important;
+    align-items: center!important;
+    justify-content: center!important;
+    min-height: 100vh!important;
+}
+
+.indexTitle {
+    text-align: center!important;
+}
+
+.indexTitle img {
+    height: auto!important; 
+}
+
+.card-container1 {
+    width: 100vw!important;
+    height: auto!important;
+    padding-top: 50px!important;
+    display: flex!important;
+    flex-wrap: wrap!important;
+    justify-content: center!important;
+}
+
+.card1 {
+    background: transparent!important;
+    width:30%!important;
+    height: auto!important;
+    min-height: 200px!important;
+    perspective: 1000px!important;
+    align-items:center!important;
+    cursor: pointer!important;
+    margin: 1rem!important;
+  }
+
+  .card-inner {
+    position: relative!important;
+    width: 100%!important;
+    height: 100%!important;
+    text-align: center!important;
+    transition: transform 0.8s !important;
+    transform-style: preserve-3d !important;
+    background-color: transparent !important;
+  }
+
+  .card1:hover .card-inner {
+    transform: rotateY(180deg) !important;
+  }
+
+  .card-front, .card-back {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    backface-visibility: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    -webkit-backface-visibility: hidden !important; 
+    backface-visibility: hidden !important;
+    border: 3px solid blueviolet !important;
+    
+    border-radius: 5px;
+  }
+
+  .card-front {
+    color: rgb(138,43,226) !important;
+    box-shadow: 0px 0px 10px 2px rgba(138,43,226,0.75) !important;
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(138,43,226,0.75) !important;
+    -moz-box-shadow: 0px 0px 10px 2px rgba(138,43,226,0.75) !important;
+  }
+
+  .card-back {
+    transform: rotateY(180deg) !important;
+    color:white !important;
+    background-color: rgb(138,43,226) !important;
+    -webkit-box-shadow:0px 0px 80px 20px rgba(138,43,226,0.9) !important;
+    -moz-box-shadow: 0px 0px 80px 20px rgba(138,43,226,0.9) !important;
+    box-shadow: 0px 0px 80px 20px rgba(138,43,226,0.9) !important;
+
+  }
+  
+  h3 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+    font-weight: 300 !important;
+    font-size:1.5em !important;
+    margin: 15px 0 0 !important;
+    color: rgb(56, 7, 102) !important;
+  }
+
+  @media screen and (max-width: 960px){
+    .card1{
+      width: 48% !important;
+    }
+  }
+  
+  @media screen and (max-width: 460px){
+    .card1{
+      width: 70% !important;
+    }
+  }
